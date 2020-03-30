@@ -7,6 +7,7 @@ const getSortedUniqueSkills = users => {
       totalSkills.push(...user.skills);
       return totalSkills;
     }, [])
+    .filter((value, index, user) => user.indexOf(value) === index)
     .sort();
 
   return result;
